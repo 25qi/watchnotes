@@ -1,31 +1,90 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-title-en="WatchNotes: AI that watches YouTube with you" data-title-zh="WatchNotes：陪你看 YouTube 的 AI 筆記">
 <head>
 <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>WatchNotes</title>
+<title>WatchNotes: AI that watches YouTube with you</title>
 <meta name="description" content="An AI that watches YouTube videos with you and writes timestamped Markdown notes." />
 <link rel="stylesheet" href="style.css" /><link rel="icon" href="icon.png" />
 </head>
 <body>
-<header><img src="icon.png" alt="" /><h1>WatchNotes</h1></header>
-<nav><a href="privacy.html">Privacy policy</a><a href="https://github.com/25qi/watchnotes/issues">Support</a></nav>
+<div class="topbar">
+  <header><img src="icon.png" alt="" /><h1>WatchNotes</h1></header>
+  <div class="lang-switch" role="group" aria-label="Language"><button type="button" data-set-lang="en">English</button><button type="button" data-set-lang="zh">中文</button></div>
+</div>
+<nav>
+  <a href="privacy.html" data-keep-lang><span data-lang="en">Privacy policy</span><span data-lang="zh">隱私權政策</span></a>
+  <a href="https://github.com/25qi/watchnotes/issues"><span data-lang="en">Support</span><span data-lang="zh">問題回報</span></a>
+</nav>
 
-<p><b>An AI that watches YouTube with you.</b> WatchNotes opens a side panel next to the video. Google Gemini watches the video itself, frames and audio together, so it can read slides, code and charts on screen. It writes self-contained notes with clickable timestamps, answers your questions as you watch, and saves everything as Markdown, straight into your Obsidian vault if you like.</p>
+<main data-lang="en">
+<p class="tagline">An AI that watches YouTube with you, and writes the notes.</p>
+<p><span class="badge">Chrome · Edge</span> <span class="badge">Coming soon to the Chrome Web Store and Edge Add-ons</span></p>
+<img class="shot" src="img/screenshot-en.png" alt="WatchNotes side panel next to a video, showing notes with timestamps and a table" />
+
+<h2>Why it is different</h2>
+<p>Most video summary tools only read the captions, so they are blind to what is on screen. WatchNotes hands the video itself to Google Gemini, frames and audio together, so slides, code, diagrams and charts make it into your notes.</p>
+
+<h2>What it does</h2>
 <ul>
-<li>Two modes: watch the video (sees the screen) or read captions (uses less quota).</li>
-<li>Clickable timestamps jump the player to that second.</li>
-<li>Notes stay in your browser; optionally written into a folder you pick, or downloaded as .md.</li>
-<li>Bring your own free Gemini API key. No account, no server, no tracking.</li>
-<li>Interface in English and Traditional Chinese.</li>
+<li><b>Notes that stand alone:</b> topic sections, concrete steps, tables and takeaways, written in a side panel beside the video.</li>
+<li><b>Clickable timestamps:</b> click one and the player jumps to that second.</li>
+<li><b>Ask while you watch:</b> mention a time such as 07:20 and the answer is grounded in that moment.</li>
+<li><b>Your own thoughts:</b> "My note" saves your text verbatim, never sent to the AI.</li>
+<li><b>Two modes:</b> watch the video (sees the screen), or read captions (uses much less quota).</li>
+<li><b>One library:</b> every video's notes stay in your browser. Reopen, keep asking, or download as Markdown.</li>
+<li><b>Obsidian friendly:</b> pick a folder, such as your vault, and notes are written there in real time.</li>
+<li><b>Languages:</b> interface in English and Traditional Chinese; notes in English, Traditional Chinese, Simplified Chinese or Japanese.</li>
 </ul>
 
-<h2>Support</h2>
-<p>Found a bug or have a question? Open an issue at <a href="https://github.com/25qi/watchnotes/issues">github.com/25qi/watchnotes/issues</a>.</p>
+<h2>Getting started</h2>
+<ol>
+<li>Install WatchNotes from the Chrome Web Store or Edge Add-ons (links will appear here once published).</li>
+<li>Get a free Gemini API key at <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a> and paste it into the extension's settings. The settings page has a step-by-step guide.</li>
+<li>Open any YouTube video, click the WatchNotes icon, and press <b>Start by watching</b>.</li>
+</ol>
 
-<section lang="zh-Hant">
-<h2>繁體中文</h2>
-<p><b>陪你看 YouTube 的 AI。</b>WatchNotes 在影片旁開一個側邊面板，由 Google Gemini 直接看影片（畫面加聲音），投影片、程式碼、圖表都讀得到；它會寫出自足的知識筆記、附可點擊跳轉的時間戳，邊看邊回答你的問題，並存成 Markdown，也可以直接寫進你的 Obsidian。</p>
-<p>使用你自己的免費 Gemini API key，不需要帳號，沒有伺服器，也不追蹤。問題回報請到 <a href="https://github.com/25qi/watchnotes/issues">GitHub issues</a>。</p>
-</section>
+<h2>Privacy in one paragraph</h2>
+<p>No account, no developer server, no analytics, no tracking. Your key, settings and notes stay in your browser. Requests go straight from your browser to Google's Gemini API with your own key; on Google's free tier, Google may use submitted content to improve its products. Read the full <a href="privacy.html" data-keep-lang>privacy policy</a>.</p>
+
+<h2>Support</h2>
+<p>Found a bug or have an idea? Open an issue at <a href="https://github.com/25qi/watchnotes/issues">github.com/25qi/watchnotes/issues</a>.</p>
+<p class="muted">WatchNotes is not affiliated with or endorsed by YouTube or Google.</p>
+</main>
+
+<main data-lang="zh" lang="zh-Hant">
+<p class="tagline">陪你看 YouTube 的 AI，順便把筆記寫好。</p>
+<p><span class="badge">Chrome · Edge</span> <span class="badge">即將上架 Chrome 線上應用程式商店與 Edge 附加元件</span></p>
+<img class="shot" src="img/screenshot-zh.png" alt="WatchNotes 側邊面板在影片旁，顯示有時間戳與表格的筆記" />
+
+<h2>哪裡不一樣</h2>
+<p>多數影片摘要工具只讀字幕，看不到畫面上的東西。WatchNotes 把影片本身交給 Google Gemini，畫面和聲音一起看，投影片、程式碼、圖表的內容都會寫進你的筆記。</p>
+
+<h2>功能</h2>
+<ul>
+<li><b>自足的知識筆記：</b>主題段落、具體步驟、表格與行動建議，寫在影片旁的側邊面板。</li>
+<li><b>可點的時間戳：</b>點一下，播放器就跳到那一秒。</li>
+<li><b>邊看邊問：</b>問題裡帶上 07:20 這種時間，AI 就針對那一段回答。</li>
+<li><b>記下自己的想法：</b>「記想法」原封不動存進筆記，不會送給 AI。</li>
+<li><b>兩種模式：</b>看影片（讀得到畫面），或讀字幕（省很多額度）。</li>
+<li><b>全部筆記一個地方：</b>每部影片的筆記都存在瀏覽器，隨時打開、繼續問，或下載成 Markdown。</li>
+<li><b>支援 Obsidian：</b>選一個資料夾（例如你的 vault），筆記會即時寫進去。</li>
+<li><b>多語言：</b>介面支援英文與繁體中文；筆記可用英文、繁體中文、簡體中文或日文撰寫。</li>
+</ul>
+
+<h2>開始使用</h2>
+<ol>
+<li>從 Chrome 線上應用程式商店或 Edge 附加元件安裝 WatchNotes（上架後連結會放在這裡）。</li>
+<li>到 <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a> 免費申請 Gemini API key，貼到擴充套件的設定頁；設定頁有逐步教學。</li>
+<li>打開任何一部 YouTube 影片，點工具列的 WatchNotes 圖示，按 <b>看影片開始</b>。</li>
+</ol>
+
+<h2>隱私，一段話說完</h2>
+<p>不用帳號、沒有開發者伺服器、沒有分析與追蹤。你的 key、設定和筆記都只存在你的瀏覽器。請求從你的瀏覽器用你自己的 key 直接送到 Google Gemini API；使用免費層時，Google 可能用送出的內容改進產品。完整內容請看<a href="privacy.html" data-keep-lang>隱私權政策</a>。</p>
+
+<h2>問題回報</h2>
+<p>發現問題或有想法？請到 <a href="https://github.com/25qi/watchnotes/issues">github.com/25qi/watchnotes/issues</a> 開 issue。</p>
+<p class="muted">WatchNotes 與 YouTube、Google 沒有任何關聯，也未獲其背書。</p>
+</main>
+<script src="lang.js"></script>
 </body>
 </html>

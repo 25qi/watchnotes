@@ -1,16 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-title-en="WatchNotes Privacy Policy" data-title-zh="WatchNotes 隱私權政策">
 <head>
 <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>WatchNotes Privacy Policy</title>
 <link rel="stylesheet" href="style.css" /><link rel="icon" href="icon.png" />
 </head>
 <body>
-<header><img src="icon.png" alt="" /><h1>WatchNotes Privacy Policy</h1></header>
-<nav><a href="index.html">Home</a><a href="#en">English</a><a href="#zh">繁體中文</a></nav>
-<p class="muted">Effective date: 2026-09-18</p>
+<div class="topbar">
+  <header><img src="icon.png" alt="" /><h1><span data-lang="en">WatchNotes Privacy Policy</span><span data-lang="zh">WatchNotes 隱私權政策</span></h1></header>
+  <div class="lang-switch" role="group" aria-label="Language"><button type="button" data-set-lang="en">English</button><button type="button" data-set-lang="zh">中文</button></div>
+</div>
+<nav><a href="index.html" data-keep-lang><span data-lang="en">Home</span><span data-lang="zh">首頁</span></a></nav>
+<p class="muted"><span data-lang="en">Effective date: 2026-09-18</span><span data-lang="zh">生效日期：2026-09-18</span></p>
 
-<section id="en">
+<section id="en" data-lang="en">
 <h2>Summary</h2>
 <p>WatchNotes is a browser extension that lets an AI (Google Gemini) watch the YouTube video you are viewing and write notes with you. <b>The developer runs no server and collects nothing.</b> Your settings and notes stay in your browser. The only data that leaves your computer is what the extension sends to Google's Gemini API, using the API key you supply, to answer your requests.</p>
 
@@ -64,8 +67,8 @@
 <p>If this policy changes, the new version will be posted on this page with a new effective date. Questions: open an issue at <a href="https://github.com/25qi/watchnotes/issues">github.com/25qi/watchnotes/issues</a>.</p>
 </section>
 
-<section id="zh" lang="zh-Hant">
-<h2>繁體中文摘要</h2>
+<section id="zh" lang="zh-Hant" data-lang="zh">
+<h2>摘要</h2>
 <p>WatchNotes 是一個瀏覽器擴充套件，讓 AI（Google Gemini）陪你看正在播放的 YouTube 影片並寫筆記。<b>開發者沒有任何伺服器，也不蒐集任何資料。</b>你的設定與筆記只存在你的瀏覽器裡。唯一離開你電腦的資料，是擴充套件用你自己的 API key、直接送給 Google Gemini API 的請求。</p>
 
 <h3>儲存了什麼、存在哪裡</h3>
@@ -96,8 +99,20 @@
 <li>到 <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a> 刪除或停用你的 API key。</li>
 </ul>
 
+<h3>權限說明</h3>
+<table>
+<tr><th>權限</th><th>用途</th></tr>
+<tr><td>sidePanel</td><td>在影片旁顯示筆記面板。</td></tr>
+<tr><td>storage</td><td>把設定和筆記存在瀏覽器裡。</td></tr>
+<tr><td>scripting</td><td>讓面板連上安裝擴充套件前就已開著的 YouTube 分頁。</td></tr>
+<tr><td>downloads</td><td>按下載時把筆記存成 Markdown 檔。</td></tr>
+<tr><td>存取 youtube.com</td><td>讀取影片標題、播放時間與字幕，並在你點時間戳時讓播放器跳轉。</td></tr>
+<tr><td>存取 generativelanguage.googleapis.com</td><td>把你的請求送到 Gemini API。</td></tr>
+</table>
+
 <h3>政策變更與聯絡</h3>
 <p>政策若有變更，會更新在本頁並標示新的生效日期。有問題請到 <a href="https://github.com/25qi/watchnotes/issues">github.com/25qi/watchnotes/issues</a> 開 issue。</p>
 </section>
+<script src="lang.js"></script>
 </body>
 </html>
