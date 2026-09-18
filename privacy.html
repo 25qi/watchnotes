@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WatchNotes Privacy Policy</title>
+<link rel="stylesheet" href="style.css" /><link rel="icon" href="icon.png" />
+</head>
+<body>
+<header><img src="icon.png" alt="" /><h1>WatchNotes Privacy Policy</h1></header>
+<nav><a href="index.html">Home</a><a href="#en">English</a><a href="#zh">繁體中文</a></nav>
+<p class="muted">Effective date: 2026-09-18</p>
+
+<section id="en">
+<h2>Summary</h2>
+<p>WatchNotes is a browser extension that lets an AI (Google Gemini) watch the YouTube video you are viewing and write notes with you. <b>The developer runs no server and collects nothing.</b> Your settings and notes stay in your browser. The only data that leaves your computer is what the extension sends to Google's Gemini API, using the API key you supply, to answer your requests.</p>
+
+<h2>What is stored, and where</h2>
+<table>
+<tr><th>Data</th><th>Where it is kept</th></tr>
+<tr><td>Your Gemini API key and settings (languages, model, custom prompts, Obsidian vault name)</td><td>Your browser only (<code>chrome.storage.local</code>). Not synced, not uploaded.</td></tr>
+<tr><td>Notes for each video (AI notes, your questions and the answers, your own notes) and cached captions</td><td>Your browser only (<code>chrome.storage.local</code>).</td></tr>
+<tr><td>The notes folder you choose (optional)</td><td>A folder handle kept in your browser (IndexedDB). Notes are written as Markdown files into that folder on your computer.</td></tr>
+<tr><td>Downloaded notes</td><td>Your Downloads folder, only when you press Download.</td></tr>
+</table>
+
+<h2>What is sent, and to whom</h2>
+<p>Only when you start notes, ask a question, or ask again after a conversation expires, the extension sends a request directly from your browser to Google's Gemini API (<code>generativelanguage.googleapis.com</code>) with your own API key. A request can contain:</p>
+<ul>
+<li>the YouTube video URL (Google fetches the video itself; the extension does not download it),</li>
+<li>the video's captions, in caption mode,</li>
+<li>your question, the instructions (prompts), and, when an expired conversation is resumed, your earlier notes for that video.</li>
+</ul>
+<p>How Google handles this data is governed by Google's terms for the Gemini API. On the free tier Google may use submitted content to improve its products; on a paid tier it does not. See the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Additional Terms of Service</a>.</p>
+<p>To read the video title, the current playback time and captions, the extension talks to the YouTube page you already have open (<code>youtube.com</code>). Nothing else is contacted.</p>
+
+<h2>What we do not do</h2>
+<ul>
+<li>No analytics, tracking, advertising, or telemetry.</li>
+<li>No developer server; the developer never receives your API key, notes, questions, or browsing activity.</li>
+<li>No selling or sharing of data with anyone.</li>
+<li>No remote code: everything the extension runs ships inside the extension package.</li>
+</ul>
+
+<h2>Your control</h2>
+<ul>
+<li>Delete your API key or change any setting on the extension's settings page.</li>
+<li>Remove the notes folder link with Disconnect on the settings page. Files already written stay in your folder.</li>
+<li>Removing the extension deletes everything it stored in the browser.</li>
+<li>Delete or revoke your API key at <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a>.</li>
+</ul>
+
+<h2>Permissions</h2>
+<table>
+<tr><th>Permission</th><th>Why</th></tr>
+<tr><td>sidePanel</td><td>Shows the notes panel beside the video.</td></tr>
+<tr><td>storage</td><td>Keeps your settings and notes in the browser.</td></tr>
+<tr><td>scripting</td><td>Connects the panel to YouTube tabs that were already open before the extension was installed.</td></tr>
+<tr><td>downloads</td><td>Saves your notes as a Markdown file when you press Download.</td></tr>
+<tr><td>Access to youtube.com</td><td>Reads the video title, playback time and captions, and jumps the player to a timestamp you click.</td></tr>
+<tr><td>Access to generativelanguage.googleapis.com</td><td>Sends your requests to the Gemini API.</td></tr>
+</table>
+
+<h2>Changes and contact</h2>
+<p>If this policy changes, the new version will be posted on this page with a new effective date. Questions: open an issue at <a href="https://github.com/25qi/watchnotes/issues">github.com/25qi/watchnotes/issues</a>.</p>
+</section>
+
+<section id="zh" lang="zh-Hant">
+<h2>繁體中文摘要</h2>
+<p>WatchNotes 是一個瀏覽器擴充套件，讓 AI（Google Gemini）陪你看正在播放的 YouTube 影片並寫筆記。<b>開發者沒有任何伺服器，也不蒐集任何資料。</b>你的設定與筆記只存在你的瀏覽器裡。唯一離開你電腦的資料，是擴充套件用你自己的 API key、直接送給 Google Gemini API 的請求。</p>
+
+<h3>儲存了什麼、存在哪裡</h3>
+<ul>
+<li>Gemini API key 與各項設定：只存在瀏覽器本機（<code>chrome.storage.local</code>），不同步、不上傳。</li>
+<li>每部影片的筆記（AI 筆記、你的問題與回答、你自己的想法）與字幕快取：只存在瀏覽器本機。</li>
+<li>你選的筆記資料夾（選填）：瀏覽器只保存資料夾的存取權（IndexedDB），筆記以 Markdown 檔寫進你電腦上的那個資料夾。</li>
+<li>下載的筆記：只有按下載時才存到你的「下載」資料夾。</li>
+</ul>
+
+<h3>送出了什麼、送給誰</h3>
+<p>只有在你開始產生筆記、提問，或對話過期後再次提問時，擴充套件才會從你的瀏覽器直接呼叫 Google Gemini API（<code>generativelanguage.googleapis.com</code>），使用你自己的 API key。內容可能包含：YouTube 影片網址（影片由 Google 自行讀取，擴充套件不下載影片）、字幕模式下的字幕文字、你的問題與指令，以及接續過期對話時這部影片先前的筆記。</p>
+<p>Google 如何處理這些資料依 Gemini API 條款而定：免費層送出的內容可能被 Google 用於改進產品，付費層則不會。請參考 <a href="https://ai.google.dev/gemini-api/terms">Gemini API 附加服務條款</a>。</p>
+<p>為了讀取影片標題、播放時間與字幕，擴充套件只會和你已經開啟的 YouTube 頁面（<code>youtube.com</code>）溝通，不會連到其他地方。</p>
+
+<h3>我們不做的事</h3>
+<ul>
+<li>沒有任何分析、追蹤、廣告或遙測。</li>
+<li>沒有開發者伺服器，開發者收不到你的 API key、筆記、問題或瀏覽紀錄。</li>
+<li>不販售、不分享任何資料。</li>
+<li>不載入遠端程式碼，執行的程式全部包含在擴充套件裡。</li>
+</ul>
+
+<h3>你可以控制的</h3>
+<ul>
+<li>在設定頁刪除 API key 或修改任何設定；按「取消連結」移除資料夾連結（已寫入的檔案會留在你的資料夾）。</li>
+<li>移除擴充套件會刪除它在瀏覽器裡存的所有資料。</li>
+<li>到 <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a> 刪除或停用你的 API key。</li>
+</ul>
+
+<h3>政策變更與聯絡</h3>
+<p>政策若有變更，會更新在本頁並標示新的生效日期。有問題請到 <a href="https://github.com/25qi/watchnotes/issues">github.com/25qi/watchnotes/issues</a> 開 issue。</p>
+</section>
+</body>
+</html>
